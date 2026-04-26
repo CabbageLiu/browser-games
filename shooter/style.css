@@ -1,0 +1,90 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #0a0d12;
+  color: #e6e6e6;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  overflow: hidden;
+}
+.wrap {
+  position: relative;
+  width: 800px;
+  height: 600px;
+}
+canvas {
+  display: block;
+  background: #15141a;
+  border: 2px solid #2a2e3a;
+  cursor: crosshair;
+}
+.hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-size: 14px;
+}
+.hud .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 16px;
+  text-shadow: 0 0 4px #000, 0 0 4px #000;
+}
+.hud .top .left,
+.hud .top .right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hud .top .right { text-align: right; }
+.hp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hp-bar {
+  width: 180px;
+  height: 14px;
+  background: #2a1010;
+  border: 1px solid #5a1010;
+  position: relative;
+  overflow: hidden;
+}
+.hp-fill {
+  height: 100%;
+  background: linear-gradient(180deg, #ff7a7a, #b41818);
+  width: 100%;
+  transition: width 80ms linear;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 10, 14, 0.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  text-align: center;
+  pointer-events: none;
+  padding: 32px;
+}
+.overlay.show { display: flex; }
+.overlay h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: 4px;
+  color: #f5f5f5;
+  text-shadow: 0 0 12px rgba(120, 180, 255, 0.4);
+}
+.overlay p {
+  margin: 0;
+  color: #b8b8b8;
+  font-size: 15px;
+  line-height: 1.6;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Top-Down Shooter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <div class="hud">
+    <div class="top">
+      <div class="left">
+        <div class="hp">
+          <div class="hp-bar"><div class="hp-fill" id="hp-fill"></div></div>
+          <span id="hp-text">100</span>
+        </div>
+        <div id="score-text">Score: 0</div>
+      </div>
+      <div class="right">
+        <div id="level-text">Level 1</div>
+        <div id="enemies-text">Enemies: 0</div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay show" id="overlay">
+    <h1 id="overlay-title">TOP-DOWN SHOOTER</h1>
+    <p id="overlay-sub">Move: Arrows / WASD &nbsp;&middot;&nbsp; Aim: Mouse &nbsp;&middot;&nbsp; Shoot: Click<br>Press Enter to Start</p>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
